@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chai aur code </h1>
+    <button id="stop"> Stop </button>
+</body>
+<script>
+// setTimeout -> call api too
+// handler -> a function jiska naam nahi h
+
+    // setTimeout(function (){
+    //     console.log("Priya ");
+    // }, 2000)
+
+
+
+    // we can write it as
+    const sayPriya = function(){
+        console.log("Priya");
+    }
+    // document.querySelector('h1').innerHTML = "best JS series"
+    // setTimeout(sayPriya, 5000)
+    // mujhe isme bhi timeout lgana h to wo kaise kare 
+    // this 5000 defines the 5000 miliseconds
+
+    // const changeText = function(){
+    //     document.querySelector('h1').innerHTML = "best JS series"
+    // }
+    // setTimeout(changeText, 2000)
+
+
+    const changeText = function(){
+        document.querySelector('h1').innerHTML = "best JS series"
+    }
+    const changeMe = setTimeout(changeText, 2000)
+
+    document.querySelector('#stop').addEventListener('click', function(){
+        clearTimeout(changeMe)
+        console.log("STOPPED");
+    })
+</script>
+</html>
+
+
